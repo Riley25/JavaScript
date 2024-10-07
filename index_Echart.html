@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECharts Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div id="chartContainer" style="width: 600px; height: 400px;"></div>
+    <script>
+        const chart = echarts.init(document.getElementById('chartContainer'));
+        
+        const option = {
+            title: { text: 'Sample Line Chart' },
+            xAxis: { type: 'category', data: ['Jan', 'Feb', 'Mar', 'Apr', 'May'] },
+            yAxis: { type: 'value' },
+            series: [{
+                data: [1, 3, 2, 4, 5],
+                type: 'line'
+            }]
+        };
+
+        chart.setOption(option);
+    </script>
+</body>
+</html>
